@@ -121,7 +121,7 @@ const main = async () => {
 };
 
 // Cron job'ları oluştur
-cron.schedule('0 0 * * 1', async () => { // Pazartesi 00:00
+cron.schedule('1 0 * * 1', async () => { // Pazartesi 00:00
   console.log('Pazartesi 00:00 - Perşembe seansları için cron job başlatılıyor...');
   try {
     await main();
@@ -130,7 +130,7 @@ cron.schedule('0 0 * * 1', async () => { // Pazartesi 00:00
   }
 });
 
-cron.schedule('0 0 * * 3', async () => { // Çarşamba 00:00
+cron.schedule('1 0 * * 3', async () => { // Çarşamba 00:00
   console.log('Çarşamba 00:00 - Cumartesi seansları için cron job başlatılıyor...');
   try {
     await main();
@@ -139,7 +139,7 @@ cron.schedule('0 0 * * 3', async () => { // Çarşamba 00:00
   }
 });
 
-cron.schedule('0 0 * * 6', async () => { // Cumartesi 00:00
+cron.schedule('1 0 * * 6', async () => { // Cumartesi 00:00
   console.log('Cumartesi 00:00 - Salı seansları için cron job başlatılıyor...');
   try {
     await main();
